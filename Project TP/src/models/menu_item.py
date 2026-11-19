@@ -39,14 +39,15 @@ def _build()-> list[MenuItem]:
   )
   add_same_price(FOOD, "Rice Bowl",
         ["Chicken Katsu", "Crispy Chicken", "Chicken Salted Egg",
-        "Chicken Curry", "Chicken Blackpepper", "Chicken Teriyaki"],
+         "Chicken Curry", "Chicken Blackpepper", "Chicken Teriyaki"],
         "35000",
   )
-  add_all(FOOD,[
-    ("Fried Rice", "25000"),
-    ("Chicken Carbonara", "32000"),
-    ("Salted Egg Curry Chicken", "60000"),
-  ])
+  add(FOOD, [("Fried Rice", "25000"),])
+  add_same_price(FOOD, "Chicken Series",
+        ["Chicken Carbonara", "Chicken Katsu", "Salted Egg Curry Chicken",
+         "Buldak Chicken", "Teriyaki Chicken", "Sour Cream & Onion Chicken"], 
+        "32000",
+  )
   add_all(FOOD, [
     ("Grilled Chicken", "30000"),
     ("Grilled Beef", "45000"),
@@ -102,8 +103,21 @@ def _build()-> list[MenuItem]:
     ("Strawberry", "35000"),
   ], group="Cakes")
   add(DESSERT, "French Fries", "20000")
-  add_same_price(DESSERT, "Donuts", ["Cheese", "Matcha", "Greentea", "Chocolate"], "20000")
-  add_all(DESSERT, [("Cookies", "30000"), ("Pancake", "25000")])
+  add_same_price(DESSERT, "Donuts", ["Cheese", "Matcha", "Greentea", "Chocolate", "Red Velvet", "Strawberry"], "20000")
+  add_same_price(DESSERT, "Cookies", ["Original", "Matcha", "Red Velvet", "Chocolate", "Bisscoff", "Strawberry & Cake", "Birthday Cake"], "30000")
+  add_all(DESSERT, [
+    ("Cheese", "25000"),
+    ("Pistachio", "28000"),
+    ("Blueberry", "25000"),
+    ("Matcha", "28000"),
+    ("Bisscoff", "28000"),
+    ("Taro", "25000"),
+    ("Oreo", "25000"),
+    ("Peach", "25000"),
+    ("Mango", "25000"),
+    ("Boba", "25000"),
+    ("Grape", "25000"),
+  ], group="Souffle Pancake")
   add_all(DESSERT, [
     ("Chocolatte", "28000"),
     ("Strawberry", "28000"),
