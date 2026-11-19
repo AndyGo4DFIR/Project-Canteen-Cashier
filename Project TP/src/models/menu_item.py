@@ -33,6 +33,10 @@ def _build()-> list[MenuItem]:
     for name in names:
       add(category, name, price, group)
 # FOOD
+  add_same_price(FOOD, "Spaghetti",
+        ["Carbonara", "Bolognese", "Mushroom", "Aglio e Olio"],
+        "35000",
+  )
   add_same_price(FOOD, "Rice Bowl",
         ["Chicken Katsu", "Crispy Chicken", "Chicken Salted Egg",
         "Chicken Curry", "Chicken Blackpepper", "Chicken Teriyaki"],
