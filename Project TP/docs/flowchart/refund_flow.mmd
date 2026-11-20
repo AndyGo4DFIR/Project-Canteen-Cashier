@@ -1,0 +1,18 @@
+flowchart TD
+    Start([Mulai Alur Cancel Order & Refund]) --> SelectTx["Pilih Transaksi / Pesanan"]
+    SelectTx --> FoundTx{"Transaksi Ditemukan & Valid?"}
+    FoundTx -->|"Tidak"| ErrTx["Tampilkan Pesan Transaksi Tidak Valid / Sudah Refund"]
+    ErrTx --> SelectTx
+
+    FoundTx -->|"Ya"| AlreadyRefund{"Sudah Pernah Di-Refund?"}
+    AlreadyRefund -->|"Ya"| ErrTx
+    AlreadyRefund -->|"Tidak"| Confirm["Konfirmasi Cancel Order & Refund"]
+
+    Confirm --> CancelConfirm{"Lanjutkan Refund?"}
+    CancelConfirm -->|"Tidak"| End([Batal / Kembali])
+
+    CancelConfirm -->|"Ya"| CalcRefund["Hitung Nominal Pengembalian Dana"]
+    CalcRefund --> RestoreStock["Kembalikan Stok Item ke Inventory"]
+    RestoreStock --> UpdateReport["Perbarui Status Transaksi & Daily Sales Summary"]
+    UpdateReport --> Done["Refund Berhasil Diproses"]
+    Done --> End([Selesai / Kembali ke Dashboard])

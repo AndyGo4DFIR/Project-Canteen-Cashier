@@ -1,0 +1,19 @@
+flowchart TD
+    Start([Mulai Alur Inventory]) --> ViewInv["Tampilkan Daftar Menu & Sisa Stok"]
+    ViewInv --> InvAction{"Pilih Aksi Inventory"}
+
+    InvAction -->|"Tambah / Perbarui Stok"| SelectItem["Pilih Item Menu"]
+    SelectItem --> InputQty["Input Jumlah Tambahan / Stok Baru"]
+    InputQty --> ValidQty{"Input Valid & > 0?"}
+    ValidQty -->|"Tidak"| ErrQty["Tampilkan Pesan Input Tidak Valid"]
+    ErrQty --> InputQty
+    ValidQty -->|"Ya"| SaveStock["Perbarui Data Stok Inventory"]
+    SaveStock --> LowStockCheck{"Stok Masih Menipis?"}
+    LowStockCheck -->|"Ya"| LowStockNotif["Tampilkan Low Stock Notification"]
+    LowStockCheck -->|"Tidak"| InvDone["Stok Berhasil Diperbarui"]
+    LowStockNotif --> InvDone
+    InvDone --> InvAction
+
+    InvAction -->|"Cek Peringatan Stok Menipis"| LowStockCheck
+
+    InvAction -->|"Kembali ke Dashboard"| End([Selesai / Kembali ke Dashboard])

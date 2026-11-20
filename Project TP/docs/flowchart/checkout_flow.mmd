@@ -1,0 +1,17 @@
+flowchart TD
+    A([Mulai Checkout]) --> B[Ambil Item dari Cart]
+    B --> C{Cart Kosong?}
+    C -->|Ya| D[Tampilkan Pesan Cart Kosong]
+    D --> Z([Selesai])
+    C -->|Tidak| E[InventoryService.check_stock cart]
+    E --> F{Stok Cukup?}
+    F -->|Tidak| G[Tolak Checkout / Info Stok Kurang]
+    G --> Z
+    F -->|Ya| H[PricingService.calculate cart -> PricingResult]
+    H --> I[Input Pembayaran & compute_change]
+    I --> J{validate_payment Valid?}
+    J -->|Tidak| K[Minta Input Ulang Pembayaran]
+    K --> I
+    J -->|Ya| L[InventoryService.reduce_for_order & Simpan PAID]
+    L --> M[Tampilkan Struk & Update Laporan]
+    M --> Z
