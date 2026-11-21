@@ -43,7 +43,7 @@ def _build()-> list[MenuItem]:
         "35000",
   )
   add(FOOD, [("Fried Rice", "25000"),])
-  add_same_price(FOOD, "Chicken Series",
+  add_same_price(FOOD, "Chicken Bites",
         ["Chicken Carbonara", "Chicken Katsu", "Salted Egg Curry Chicken",
          "Buldak Chicken", "Teriyaki Chicken", "Sour Cream & Onion Chicken"], 
         "32000",
