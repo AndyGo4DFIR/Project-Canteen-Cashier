@@ -1,5 +1,5 @@
+#Jefri Handika
 from tkinter import ttk
-
 
 class SummaryPanel(ttk.Frame):
     def __init__(self, master) -> None:
