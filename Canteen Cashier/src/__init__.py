@@ -1,0 +1,1 @@
+"""SynCafe cashier application."""
