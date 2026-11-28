@@ -1,1 +1,2 @@
+# ERIC
 """SynCafe cashier application."""
