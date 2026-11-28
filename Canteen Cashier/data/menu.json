@@ -1,0 +1,16 @@
+[
+  {"id":"spaghetti-bolognese","name":"Spaghetti Bolognese","category":"Main","price":45000},
+  {"id":"spaghetti-carbonara","name":"Spaghetti Carbonara","category":"Main","price":45000},
+  {"id":"spaghetti-aglio","name":"Spaghetti Aglio e Olio","category":"Main","price":40000},
+  {"id":"rice-bowl","name":"Chicken Rice Bowl","category":"Rice Bowl","price":35000},
+  {"id":"fried-rice","name":"Fried Rice","category":"Rice Bowl","price":25000},
+  {"id":"chicken-katsu","name":"Chicken Katsu","category":"Main","price":32000},
+  {"id":"steak","name":"Grilled Steak","category":"Main","price":55000},
+  {"id":"americano","name":"Iced Americano","category":"Drink","price":20000},
+  {"id":"cafe-latte","name":"Cafe Latte","category":"Drink","price":28000},
+  {"id":"matcha-latte","name":"Matcha Latte","category":"Drink","price":32000},
+  {"id":"orange-juice","name":"Orange Juice","category":"Drink","price":18000},
+  {"id":"chocolate-cake","name":"Chocolate Cake","category":"Dessert","price":28000},
+  {"id":"souffle-pancake","name":"Original Souffle Pancake","category":"Dessert","price":25000},
+  {"id":"biscoff-waffle","name":"Biscoff Waffle","category":"Dessert","price":35000}
+]
